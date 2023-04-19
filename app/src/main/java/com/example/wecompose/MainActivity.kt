@@ -21,6 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.wecompose.R.drawable.*
 import com.example.wecompose.ui.theme.WeComposeTheme
 import com.example.wecompose.ui.theme.black
 import com.example.wecompose.ui.theme.green3
@@ -48,19 +49,19 @@ private fun WeBottomBar(selected: Int) {
 
     Row(Modifier.background(white1)) {
         TabItem(
-            if (selected == 0) R.drawable.ic_chat_filled else R.drawable.ic_chat_outlined,
+            if (selected == 0) ic_chat_filled else ic_chat_outlined,
             "聊天", if (selected == 0) green3 else black, Modifier.weight(1f)
         )
         TabItem(
-            if (selected == 1) R.drawable.ic_contacts_filled else R.drawable.ic_contacts_outlined,
+            if (selected == 1) ic_contacts_filled else ic_contacts_outlined,
             "通讯录", if (selected == 1) green3 else black, Modifier.weight(1f)
         )
         TabItem(
-            if (selected == 2) R.drawable.ic_discovery_filled else R.drawable.ic_discovery_outlined,
+            if (selected == 2) ic_discovery_filled else ic_discovery_outlined,
             "发现", if (selected == 2) green3 else black, Modifier.weight(1f)
         )
         TabItem(
-            if (selected == 3) R.drawable.ic_me_filled else R.drawable.ic_me_outlined,
+            if (selected == 3) ic_me_filled else ic_me_outlined,
             "我", if (selected == 3) green3 else black, Modifier.weight(1f)
         )
     }
@@ -84,11 +85,11 @@ private fun TabItem(
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun TabItemPreview() {
-    TabItem(iconId = R.drawable.ic_chat_outlined, title = "聊天", black)
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun TabItemPreview() {
+//    TabItem(iconId = ic_chat_outlined, title = "聊天", black)
+//}
 
 @Preview(showBackground = true)
 @Composable
