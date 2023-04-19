@@ -2,6 +2,8 @@
 
 package com.example.wecompose
 
+import android.annotation.SuppressLint
+import android.content.res.Resources
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,12 +30,14 @@ import com.example.wecompose.ui.theme.green3
 import com.example.wecompose.ui.theme.white1
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             WeComposeTheme {
                 Column {
                     Row {
+
                         //            WeBottomBar()
                     }
                 }
@@ -50,19 +54,27 @@ private fun WeBottomBar(selected: Int) {
     Row(Modifier.background(white1)) {
         TabItem(
             if (selected == 0) ic_chat_filled else ic_chat_outlined,
-            "聊天", if (selected == 0) green3 else black, Modifier.weight(1f)
+            "聊天",
+            if (selected == 0) green3 else black,
+            Modifier.weight(1f)
         )
         TabItem(
             if (selected == 1) ic_contacts_filled else ic_contacts_outlined,
-            "通讯录", if (selected == 1) green3 else black, Modifier.weight(1f)
+            "通讯录",
+            if (selected == 1) green3 else black,
+            Modifier.weight(1f)
         )
         TabItem(
             if (selected == 2) ic_discovery_filled else ic_discovery_outlined,
-            "发现", if (selected == 2) green3 else black, Modifier.weight(1f)
+            "发现",
+            if (selected == 2) green3 else black,
+            Modifier.weight(1f)
         )
         TabItem(
             if (selected == 3) ic_me_filled else ic_me_outlined,
-            "我", if (selected == 3) green3 else black, Modifier.weight(1f)
+            "我",
+            if (selected == 3) green3 else black,
+            Modifier.weight(1f)
         )
     }
 
@@ -71,14 +83,10 @@ private fun WeBottomBar(selected: Int) {
 
 @Composable
 private fun TabItem(
-    @DrawableRes iconId: Int,
-    title: String,
-    tint: Color,
-    modifier: Modifier = Modifier
+    @DrawableRes iconId: Int, title: String, tint: Color, modifier: Modifier = Modifier
 ) {
     Column(
-        modifier.padding(vertical = 8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier.padding(vertical = 8.dp), horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Icon(painterResource(iconId), title, Modifier.size(24.dp), tint = tint)
         Text(title, fontSize = 11.sp)
@@ -94,7 +102,7 @@ private fun TabItem(
 @Preview(showBackground = true)
 @Composable
 fun WeBottomBarPreview() {
-    WeBottomBar(selected = 3)
+    WeBottomBar(selected = 2)
 }
 
 
