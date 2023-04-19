@@ -94,7 +94,7 @@ private fun TabItem(
 @Preview(showBackground = true)
 @Composable
 fun WeBottomBarPreview() {
-    WeBottomBar(selected = 1)
+    WeBottomBar(selected = 3)
 }
 
 
