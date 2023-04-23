@@ -14,7 +14,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.wecompose.WeViewModel
 import com.example.wecompose.ui.theme.WeComposeTheme
 import com.example.wecompose.R
-
 @Composable
 fun WeTopBar(title: String, onBack: (() -> Unit)? = null) {
   Box(
